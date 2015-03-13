@@ -3,8 +3,90 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>ITU.film</title>
+
+    <!-- include Bootstrap css file -->
+    <!-- CDN: Not using this since PhpStorm can't provide auto-completion :(
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="bootstrap.css" type="text/css">
+    <!-- include custom css styles -->
+    <link rel="stylesheet" href="styles.css" type="text/css">
 </head>
 <body>
-    ITU.film
+    <!-- top level container -->
+    <div class="container col-sm-8 col-sm-offset-2">
+        <!-- top -->
+        <div class="col-sm-12 top">
+            <!-- logo -->
+            <div class="logo">
+                <img src="img/itufilm-logo.png" />
+            </div> <!-- /logo -->
+
+            <!-- menu -->
+            <div class="menu">
+                <a href="#">Home</a>
+                <a href="#">Movies</a>
+                <a href="#">About</a>
+            </div> <!-- /menu -->
+        </div> <!-- /top -->
+
+        <!-- main content -->
+        <div class="col-sm-8 main-content-container">
+            <!-- news item -->
+            <div class="news-item">
+                <div class="header">Something About the Oscars 2015</div>
+                <!--<div class="news-item-image"><img src="img/oscars.png" width="100%" /></div>-->
+                <div class="news-item-image" style="background-image: url('img/oscars.png')"></div>
+                <div class="news-item-content">
+                    Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien. Lorem Ipsum har været standard fyldtekst siden 1500-tallet, hvor en ukendt trykker sammensatte en tilfældig spalte for at trykke en bog til sammenligning af forskellige skrifttyper. Lorem Ipsum har ikke alene overlevet fem århundreder, men har også vundet indpas i elektronisk typografi uden væsentlige ændringer. Sætningen blev gjordt kendt i 1960'erne med lanceringen af Letraset-ark, som indeholdt afsnit med Lorem Ipsum, og senere med layoutprogrammer som Aldus PageMaker, som også indeholdt en udgave af Lorem Ipsum.
+                </div>
+            </div> <!-- /news item -->
+
+            <!-- news item -->
+            <div class="news-item">
+                <div class="header">Screening "Her" in Auditorium 1</div>
+                <!--<div class="news-item-image"><img src="img/oscars.png" width="100%" /></div>-->
+                <div class="news-item-image" style="background-image: url('img/her.png')"></div>
+                <div class="news-item-content">
+                    Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien. Lorem Ipsum har været standard fyldtekst siden 1500-tallet, hvor en ukendt trykker sammensatte en tilfældig spalte for at trykke en bog til sammenligning af forskellige skrifttyper. Lorem Ipsum har ikke alene overlevet fem århundreder, men har også vundet indpas i elektronisk typografi uden væsentlige ændringer. Sætningen blev gjordt kendt i 1960'erne med lanceringen af Letraset-ark, som indeholdt afsnit med Lorem Ipsum, og senere med layoutprogrammer som Aldus PageMaker, som også indeholdt en udgave af Lorem Ipsum.
+                </div>
+            </div> <!-- /news item -->
+        </div> <!-- /main content -->
+
+        <!-- sidebar -->
+        <div class="col-sm-4 sidebar-container">
+            <!-- next event -->
+            <div class="next-event">
+                <div class="header">Next Event</div>
+                <div class="next-event-image" style="background-image: url('img/wallflower.png')"></div>
+                <div class="next-event-content">
+                    The Perks of Being a Wallflower
+                    <br />
+                    16:00
+                    <br />
+                    February 13th
+                    <br />
+                    Café Analog
+                </div>
+            </div> <!-- next event -->
+
+            <!-- where to find us -->
+            <div class="where-to-find-us">
+                <div class="header">Where to Find Us</div>
+                <div class="where-to-find-us-image" style="background-image: url('img/map.png')"></div>
+                <div class="where-to-find-us-content">
+                    Café Analog, IT University of Copenhagen
+                    <br />
+                    Rued Langgaards Vej 7
+                    <br />
+                    2300 Copenhagen S
+                </div>
+            </div> <!-- where to find us -->
+        </div> <!-- sidebar -->
+
+        <!-- footer -->
+        <div class="col-sm-12 footer">
+            &copy; ITU.film 2015
+        </div> <!-- /footer -->
+    </div> <!-- /top level container -->
 </body>
 </html>
