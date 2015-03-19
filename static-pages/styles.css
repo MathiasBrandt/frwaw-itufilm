@@ -1,7 +1,97 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:100);
+
 body {
     background-color: #e5e5e5;
+    font-family: 'Roboto', sans-serif;
 }
 
+.header {
+    background-color: #cc0000;
+    min-height: 120px;
+    padding: 15px;
+    color: #ffffff;
+}
+
+.header img {
+    display: block;
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.menu a {
+    color: #ffffff;
+    margin-right: 20px;
+    font-size: medium;
+}
+
+.active-page {
+    text-decoration: underline;
+}
+
+.middle {
+    padding: 20px 20px 0px 20px;
+}
+
+.main-content {
+    padding: 0px;
+}
+
+.sidebar {
+    padding: 0px 0px 0px 20px;
+}
+
+.footer {
+    background-color: #cc0000;
+    padding: 0px;
+    color: #ffffff;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.item {
+    margin-bottom: 20px;
+}
+
+.item-heading {
+    background-color: #cc0000;
+    color: #ffffff;
+    padding-left: 15px;
+    height: 45px;
+    font-size: large;
+    line-height: 45px;
+}
+
+.item-image {
+    height: auto;
+}
+
+.item-image img {
+    width: 100%;
+}
+
+.item-content {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 15px;
+}
+
+.news-content {
+    /*min-height: 140px;*/
+}
+
+.next-event-content {
+    text-align: center;
+}
+
+
+
+
+
+
+
+/* old below */
+/*
 .top {
     background-color: #cc0000;
     height: 140px;
@@ -49,7 +139,7 @@ body {
     padding: 0px;
     width: 100%;
     height: 172px;
-    /*min-height: 100px;*/
+    /*min-height: 100px;*//*
     background: #ffffff no-repeat;
 }
 
@@ -63,7 +153,7 @@ body {
 .sidebar-container {
     padding-top: 20px;
     /*padding-left: 20px;
-    padding-right: 20px;*/
+    padding-right: 20px;*//*
     background-color: transparent;
     min-height: 500px;
 }
@@ -78,7 +168,7 @@ body {
     padding: 0px;
     width: 100%;
     height: 172px;
-    /*min-height: 100px;*/
+    /*min-height: 100px;*//*
     background: #ffffff no-repeat;
 }
 
@@ -100,7 +190,7 @@ body {
     padding: 0px;
     width: 100%;
     height: 172px;
-    /*min-height: 100px;*/
+    /*min-height: 100px;*//*
     background: #ffffff no-repeat;
 }
 
@@ -119,3 +209,4 @@ body {
     line-height: 40px;
     font-size: small;
 }
+*/
