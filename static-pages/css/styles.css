@@ -84,6 +84,12 @@ body {
     text-align: center;
 }
 
+.rating {
+    font-family: sans-serif;
+    display: inline;
+    text-align: right;
+}
+
 
 
 
