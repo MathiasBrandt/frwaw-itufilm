@@ -14,25 +14,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <div class="container">
-        <div class="header col-sm-12">
+    <div class="container-fluid xs-no-padding">
+        <div class="header col-md-8 col-md-offset-2 col-xs-12">
             <img src="img/itufilm-logo.png" />
 
             <div class="menu">
-                <a href="#">Home</a>
-                <a href="#" class="active-page">Movies</a>
+                <a href="#" class="active-page">Home</a>
+                <a href="#" class="hidden-md hidden-lg">News</a>
+                <a href="#">Movies</a>
                 <a href="#">About</a>
             </div>
         </div>
 
-        <div class="middle col-sm-12">
+        <div class="middle col-md-8 col-md-offset-2 col-xs-12">
             <div class="main-content col-sm-8">
                 <!-- movie information -->
-                <div class="col-sm-9 item">
+                <div class="col-md-9 item col-xs-12">
                     <div class="item-heading">
                         Her
 
-                        <div class="movie-information">
+                        <div class="movie-information hidden-xs hidden-sm">
                             <p>
                                 <span class="glyphicon glyphicon-star"></span>
                                 <span class="glyphicon glyphicon-star"></span>
@@ -47,24 +48,37 @@
                     </div>
 
                     <div class="item-content item-details">
+                        <div class="movie-information hidden-md hidden-lg">
+                            <p class="xs-red-font">
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                            </p>
+                            <p>
+                                Screening on February 27th
+                            </p>
+                        </div>
+
                         <table class="table table-borderless">
                             <tr>
-                                <td class="col-sm-3"><b>Runtime</b></td>
+                                <td class="col-md-3 col-xs-4"><b>Runtime</b></td>
                                 <td>126 min</td>
                             </tr>
 
                             <tr>
-                                <td class="col-sm-3"><b>Genre</b></td>
+                                <td class="col-md-3 col-xs-4"><b>Genre</b></td>
                                 <td>Drama, Romance, Sci-Fi</td>
                             </tr>
 
                             <tr>
-                                <td class="col-sm-3"><b>Release Date</b></td>
+                                <td class="col-md-3 col-xs-4"><b>Release Date</b></td>
                                 <td>January 10th, 2014</td>
                             </tr>
 
                             <tr>
-                                <td class="col-sm-3"><b>Summary</b></td>
+                                <td class="col-md-3 col-xs-4"><b>Summary</b></td>
                                 <td>A lonely writer develops an unlikely relationship with his newly purchased operating system that's designed to meet his every need.</td>
                             </tr>
                         </table>
@@ -73,7 +87,7 @@
                 <!-- /movie information -->
 
                 <!-- movie poster -->
-                <div class="col-sm-3 item item-image item-right">
+                <div class="col-md-3 item item-image item-right col-xs-12">
                     <img src="img/her-poster.png" />
 
                     <a href="#" class="btn btn-default button">Like This Movie</a>
@@ -81,40 +95,54 @@
                 <!-- /movie poster -->
 
                 <!-- recommended by -->
-                <div class="col-sm-9 item">
+                <div class="col-md-9 item col-xs-12">
                     <div class="item-heading">
                         Recommended By
                     </div>
 
                     <div class="item-content item-details">
-                        <table class="table table-borderless">
+                        <table class="table table-borderless hidden-xs hidden-sm">
                             <tr>
-                                <td class="col-sm-3"><b>Mathias Brandt</b></td>
+                                <td class="col-md-3"><b>Mathias Brandt</b></td>
                                 <td>"A great movie for people interested in AI"</td>
                             </tr>
 
                             <tr>
-                                <td class="col-sm-3"><b>Simon Langhoff</b></td>
+                                <td class="col-md-3"><b>Simon Langhoff</b></td>
                                 <td>"Gives a new perspective on AI development"</td>
                             </tr>
                         </table>
+
+                        <div class="hidden-md hidden-lg">
+                            <p>
+                                <b>Mathias Brandt</b>
+                                <br />
+                                "A great movie for people interested in AI"
+                            </p>
+
+                            <p>
+                                <b>Simon Langhoff</b>
+                                <br />
+                                "Gives a new perspective on AI development"
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <!-- /recommended by -->
 
                 <!-- similar movies -->
-                <div class="col-sm-12 item">
+                <div class="col-xs-12 item">
                     <div class="item-heading">
                         Similar Movies
                     </div>
 
                     <div class="item-content item-details">
-                        <table class="table table-borderless similar-movies-table center-text">
+                        <table class="table table-borderless similar-movies-table center-text item-image hidden-xs hidden-sm">
                             <tr>
-                                <td class="col-sm-3 item-image similar-movies-table"><a href="#"><img src="img/dallas.png" /></a></td>
-                                <td class="col-sm-3 item-image similar-movies-table"><a href="#"><img src="img/gravity.png" /></a></td>
-                                <td class="col-sm-3 item-image similar-movies-table"><a href="#"><img src="img/12years.png" /></a></td>
-                                <td class="col-sm-3 item-image similar-movies-table"><a href="#"><img src="img/silver.png" /></a></td>
+                                <td class="col-sm-3"><a href="#"><img src="img/dallas.png" /></a></td>
+                                <td class="col-sm-3"><a href="#"><img src="img/gravity.png" /></a></td>
+                                <td class="col-sm-3"><a href="#"><img src="img/12years.png" /></a></td>
+                                <td class="col-sm-3"><a href="#"><img src="img/silver.png" /></a></td>
                             </tr>
 
                             <tr>
@@ -124,12 +152,34 @@
                                 <td class="col-sm-3"><a href="#">Silver Lining's Playbook</a></td>
                             </tr>
                         </table>
+
+                        <div class="hidden-md hidden-lg item-image xs-no-padding center-text">
+                            <a href="#"><img src="img/dallas.png" /></a>
+                            <p>
+                                <a href="#">Dallas Buyers Club</a>
+                            </p>
+
+                            <a href="#"><img src="img/gravity.png" /></a>
+                            <p>
+                                <a href="#">Gravity</a>
+                            </p>
+
+                            <a href="#"><img src="img/12years.png" /></a>
+                            <p>
+                                <a href="#">12 Years a Slave</a>
+                            </p>
+
+                            <a href="#"><img src="img/silver.png" /></a>
+                            <p>
+                                <a href="#">Silver Lining's Playbook</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <!-- /similar movies -->
 
                 <!-- comments -->
-                <div class="col-sm-12 item">
+                <div class="col-xs-12 item">
                     <div class="item-heading">
                         Comments
                     </div>
@@ -155,7 +205,8 @@
                 <!-- /comments -->
             </div>
 
-            <div class="sidebar col-sm-4">
+            <!-- hide the sidebar on small devices -->
+            <div class="sidebar col-md-4 hidden-xs hidden-sm">
                 <!-- next event -->
                 <div class="item">
                     <div class="item-heading">
@@ -200,7 +251,7 @@
             </div>
         </div>
 
-        <div class="footer col-sm-12">
+        <div class="footer col-xs-12">
             &copy; 2015 ITU.film
         </div>
     </div>

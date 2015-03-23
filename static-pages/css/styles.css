@@ -182,4 +182,19 @@ body {
     .sidebar {
         padding: 0px;
     }
+
+    .item-right {
+        padding-left: 0px;
+        float: none;
+    }
+
+    .movie-information {
+        float: none;
+        text-align: left;
+        line-height: normal;
+    }
+
+    .xs-red-font {
+        color: #cc0000;
+    }
 }
