@@ -1,8 +1,16 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto:100);
+@font-face {
+    font-family: roboto-thin;
+    src: url(http://fonts.googleapis.com/css?family=Roboto:100);
+}
+
+@font-face {
+    font-family: roboto-regular;
+    src: url(http://fonts.googleapis.com/css?family=Roboto:300);
+}
 
 body {
     background-color: #e5e5e5;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'roboto-thin', sans-serif;
 }
 
 .header {
@@ -51,12 +59,14 @@ body {
 
 .item {
     margin-bottom: 20px;
+    padding-left: 0px;
 }
 
 .item-heading {
     background-color: #cc0000;
     color: #ffffff;
     padding-left: 15px;
+    padding-right: 15px;
     height: 45px;
     font-size: large;
     line-height: 45px;
@@ -76,6 +86,10 @@ body {
     padding: 15px;
 }
 
+.item-details {
+    font-size: small;
+}
+
 .news-content {
     /*min-height: 140px;*/
 }
@@ -84,10 +98,62 @@ body {
     text-align: center;
 }
 
-.rating {
-    font-family: sans-serif;
-    display: inline;
+.movie-information {
+    font-size: small;
+    display: inline-block;
+    float: right;
     text-align: right;
+    line-height: .25;
+    margin-top: 6px;
+}
+
+.table-borderless {
+    margin-bottom: 0px;
+}
+
+.table-borderless > tbody > tr > td {
+    border: none;
+    padding: 2px;
+}
+
+.similar-movies-table > tbody > tr > td {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.comment {
+    border-bottom: medium solid #cc0000;
+}
+
+.comment-author {
+    margin-bottom: 15px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.comment-date {
+    display: inline-block;
+    font-size: small;
+    float: right;
+}
+
+.comment > p {
+    margin-bottom: 5px;
+}
+
+.movie-poster {
+    float: right;
+}
+
+.button {
+    color: #cc0000;
+    border: thin solid #cc0000;
+    margin-top: 10px;
+    width: 100%;
 }
 
 
