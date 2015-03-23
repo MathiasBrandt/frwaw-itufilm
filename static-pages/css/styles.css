@@ -168,3 +168,18 @@ body {
 .small-padding {
     padding: 10px;
 }
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 991px) {
+    .xs-no-padding {
+        padding: 0px;
+    }
+
+    .header img {
+        width: 100%;
+    }
+
+    .sidebar {
+        padding: 0px;
+    }
+}
