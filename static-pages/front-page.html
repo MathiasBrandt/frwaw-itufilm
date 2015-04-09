@@ -12,8 +12,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="header col-xs-8 col-xs-offset-2">
+    <div class="container-fluid xs-no-padding">
+        <div class="header col-md-8 col-md-offset-2 col-xs-12">
             <img src="img/itufilm-logo.png" />
 
             <div class="menu">
@@ -23,9 +23,10 @@
             </div>
         </div>
 
-        <div class="middle col-xs-8 col-xs-offset-2">
+        <div class="middle col-md-8 col-md-offset-2 col-xs-12">
             <!-- news -->
-            <div class="main-content col-xs-8">
+            <!-- hide news on small devices -->
+            <div class="main-content col-md-8 hidden-xs">
                 <div class="item">
                     <div class="item-heading">
                         Oscars Fever!
@@ -74,7 +75,7 @@
             </div>
 
             <!-- make the sidebar have full width on small devices -->
-            <div class="sidebar col-xs-4">
+            <div class="sidebar col-md-4 col-xs-12">
                 <!-- next event -->
                 <div class="item">
                     <div class="item-heading">
@@ -119,7 +120,7 @@
             </div>
         </div>
 
-        <div class="footer col-xs-8 col-xs-offset-2">
+        <div class="footer col-md-8 col-md-offset-2 col-xs-12">
             &copy; 2015 ITU.film
         </div>
     </div>

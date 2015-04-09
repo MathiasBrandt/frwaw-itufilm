@@ -170,7 +170,8 @@ body {
 }
 
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 991px) {
+/* Optimized for the Nexus 5, 360 x 640 */
+@media only screen and (max-width : 360px) {
     .xs-no-padding {
         padding: 0px;
     }
@@ -182,7 +183,7 @@ body {
     .sidebar {
         padding: 0px;
     }
-
+/*
     .item-right {
         padding-left: 0px;
         float: none;
@@ -197,4 +198,5 @@ body {
     .xs-red-font {
         color: #cc0000;
     }
+    */
 }
