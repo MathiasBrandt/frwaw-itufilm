@@ -169,9 +169,8 @@ body {
     padding: 10px;
 }
 
-/* Extra Small Devices, Phones */
-/* Optimized for the Nexus 5, 360 x 640 */
-@media only screen and (max-width : 360px) {
+/* Specific for extra small devices, phones */
+@media only screen and (max-width : 768px) {
     .xs-no-padding {
         padding: 0px;
     }
