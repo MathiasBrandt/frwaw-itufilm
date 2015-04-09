@@ -1,0 +1,170 @@
+@font-face {
+    font-family: roboto-thin;
+    src: url(http://fonts.googleapis.com/css?family=Roboto:100);
+}
+
+@font-face {
+    font-family: roboto-regular;
+    src: url(http://fonts.googleapis.com/css?family=Roboto:300);
+}
+
+body {
+    background-color: #e5e5e5;
+    font-family: 'roboto-thin', sans-serif;
+}
+
+.header {
+    background-color: #cc0000;
+    min-height: 120px;
+    padding: 15px;
+    color: #ffffff;
+}
+
+.header img {
+    display: block;
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.menu a {
+    color: #ffffff;
+    margin-right: 20px;
+    font-size: medium;
+}
+
+.active-page {
+    text-decoration: underline;
+}
+
+.middle {
+    padding: 20px 20px 0px 20px;
+}
+
+.main-content {
+    padding: 0px;
+}
+
+.sidebar {
+    padding: 0px 0px 0px 20px;
+}
+
+.footer {
+    background-color: #cc0000;
+    padding: 0px;
+    color: #ffffff;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.item {
+    margin-bottom: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.item-heading {
+    background-color: #cc0000;
+    color: #ffffff;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 45px;
+    font-size: large;
+    line-height: 45px;
+}
+
+.item-image {
+    height: auto;
+}
+
+.item-image img {
+    width: 100%;
+}
+
+.item-content {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 15px;
+    border-bottom: medium solid #cc0000;
+}
+
+.item-details {
+    font-size: small;
+}
+
+.next-event-content {
+    text-align: center;
+}
+
+.movie-information {
+    font-size: small;
+    display: inline-block;
+    float: right;
+    text-align: right;
+    line-height: .25;
+    margin-top: 6px;
+}
+
+.table-borderless {
+    margin-bottom: 0px;
+}
+
+.table-borderless > tbody > tr > td {
+    border: none;
+    padding: 2px;
+}
+
+.similar-movies-table > tbody > tr > td {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.mood-recommendations-table > tbody > tr > td {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.previous-screenings-table > tbody > tr > td {
+    padding-bottom: 15px;
+    padding-right: 15px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.comment-author {
+    margin-bottom: 15px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.comment-date {
+    display: inline-block;
+    font-size: small;
+    float: right;
+}
+
+.comment > p {
+    margin-bottom: 5px;
+}
+
+.item-right {
+    padding-left: 20px;
+    float: right;
+}
+
+.button {
+    color: #cc0000;
+    border: thin solid #cc0000;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.button:hover {
+    border: thin solid #cc0000;
+}
+
+.small-padding {
+    padding: 10px;
+}
