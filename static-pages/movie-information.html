@@ -12,25 +12,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="header col-xs-8 col-xs-offset-2">
+    <div class="container-fluid xs-no-padding">
+        <div class="header col-md-8 col-md-offset-2 col-xs-12">
             <img src="img/itufilm-logo.png" />
 
             <div class="menu">
-                <a href="#">Home</a>
-                <a href="#" class="active-page">Movies</a>
+                <a href="#" class="active-page">Home</a>
+                <!-- only show news item on small devices -->
+                <a href="#" class="visible-xs-inline">News</a>
+                <a href="#">Movies</a>
                 <a href="#">About</a>
             </div>
         </div>
 
-        <div class="middle col-xs-8 col-xs-offset-2">
-            <div class="main-content col-xs-8">
+        <div class="middle col-md-8 col-md-offset-2 col-xs-12">
+            <div class="main-content col-md-8 col-xs-12">
                 <!-- movie information -->
-                <div class="col-xs-9 item">
+                <div class="col-md-9 col-xs-12 item">
                     <div class="item-heading">
                         Her
 
-                        <div class="movie-information">
+                        <div class="movie-information hidden-xs">
                             <p>
                                 <span class="glyphicon glyphicon-star"></span>
                                 <span class="glyphicon glyphicon-star"></span>
@@ -45,24 +47,36 @@
                     </div>
 
                     <div class="item-content item-details">
+                        <div class="movie-information visible-xs">
+                            <div class="rating-stars">
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                            </div>
+
+                            Screening on February 27th
+                        </div>
+
                         <table class="table table-borderless">
                             <tr>
-                                <td class="col-xs-3"><b>Runtime</b></td>
+                                <td class="col-md-3 col-xs-4"><b>Runtime</b></td>
                                 <td>126 min</td>
                             </tr>
 
                             <tr>
-                                <td class="col-xs-3"><b>Genre</b></td>
+                                <td class="col-md-3 col-xs-4"><b>Genre</b></td>
                                 <td>Drama, Romance, Sci-Fi</td>
                             </tr>
 
                             <tr>
-                                <td class="col-xs-3"><b>Release Date</b></td>
+                                <td class="col-md-3 col-xs-4"><b>Release Date</b></td>
                                 <td>January 10th, 2014</td>
                             </tr>
 
                             <tr>
-                                <td class="col-xs-3"><b>Summary</b></td>
+                                <td class="col-md-3 col-xs-4"><b>Summary</b></td>
                                 <td>A lonely writer develops an unlikely relationship with his newly purchased operating system that's designed to meet his every need.</td>
                             </tr>
                         </table>
@@ -71,7 +85,7 @@
                 <!-- /movie information -->
 
                 <!-- movie poster -->
-                <div class="col-xs-3 item item-image item-right">
+                <div class="col-md-3 col-xs-12 item item-image item-right">
                     <img src="img/her-poster.png" />
 
                     <a href="#" class="btn btn-default button">Like This Movie</a>
@@ -79,7 +93,7 @@
                 <!-- /movie poster -->
 
                 <!-- recommended by -->
-                <div class="col-xs-9 item">
+                <div class="col-md-9 col-xs-12 item">
                     <div class="item-heading">
                         Recommended By
                     </div>
@@ -87,12 +101,12 @@
                     <div class="item-content item-details">
                         <table class="table table-borderless">
                             <tr>
-                                <td class="col-xs-3"><b>Mathias Brandt</b></td>
+                                <td class="col-md-3 col-xs-5"><b>Mathias Brandt</b></td>
                                 <td>"A great movie for people interested in AI"</td>
                             </tr>
 
                             <tr>
-                                <td class="col-xs-3"><b>Simon Langhoff</b></td>
+                                <td class="col-md-3 col-xs-5"><b>Simon Langhoff</b></td>
                                 <td>"Gives a new perspective on AI development"</td>
                             </tr>
                         </table>
@@ -106,22 +120,27 @@
                         Similar Movies
                     </div>
 
-                    <div class="item-content item-details">
-                        <table class="table table-borderless similar-movies-table center-text item-image">
-                            <tr>
-                                <td class="col-sm-3"><a href="#"><img src="img/dallas.png" /></a></td>
-                                <td class="col-sm-3"><a href="#"><img src="img/gravity.png" /></a></td>
-                                <td class="col-sm-3"><a href="#"><img src="img/12years.png" /></a></td>
-                                <td class="col-sm-3"><a href="#"><img src="img/silver.png" /></a></td>
-                            </tr>
+                    <div class="item-content item-details center-text item-image">
+                        <div class="col-md-3 col-xs-6 similar-movie-item-left">
+                            <a href="#"><img src="img/dallas.png" /></a>
 
-                            <tr>
-                                <td class="col-sm-3"><a href="#">Dallas Buyers Club</a></td>
-                                <td class="col-sm-3"><a href="#">Gravity</a></td>
-                                <td class="col-sm-3"><a href="#">12 Years a Slave</a></td>
-                                <td class="col-sm-3"><a href="#">Silver Lining's Playbook</a></td>
-                            </tr>
-                        </table>
+                            <a href="#">Dallas Buyers Club</a>
+                        </div>
+                        <div class="col-md-3 col-xs-6 similar-movie-item-right">
+                            <a href="#"><img src="img/gravity.png" /></a>
+
+                            <a href="#">Gravity</a>
+                        </div>
+                        <div class="col-md-3 col-xs-6 similar-movie-item-left">
+                            <a href="#"><img src="img/12years.png" /></a>
+
+                            <a href="#">12 Years a Slave</a>
+                        </div>
+                        <div class="col-md-3 col-xs-6 similar-movie-item-right">
+                            <a href="#"><img src="img/silver.png" /></a>
+
+                            <a href="#">Silver Lining's Playbook</a>
+                        </div>
                     </div>
                 </div>
                 <!-- /similar movies -->
@@ -154,7 +173,7 @@
             </div>
 
             <!-- hide the sidebar on small devices -->
-            <div class="sidebar col-xs-4">
+            <div class="sidebar col-md-4 hidden-xs">
                 <!-- next event -->
                 <div class="item">
                     <div class="item-heading">
@@ -199,7 +218,7 @@
             </div>
         </div>
 
-        <div class="footer col-xs-8 col-xs-offset-2">
+        <div class="footer col-md-8 col-md-offset-2 col-xs-12">
             &copy; 2015 ITU.film
         </div>
     </div>
