@@ -161,6 +161,14 @@ body {
     padding: 10px;
 }
 
+.no-padding {
+    padding: 0px;
+}
+
+.recommendation {
+    margin-bottom: 25px;
+}
+
 /* Specific for extra small devices, phones */
 @media only screen and (max-width : 768px) {
     .xs-no-padding {
@@ -201,5 +209,13 @@ body {
 
     .rating-stars {
         color: #cc0000;
+    }
+
+    .movie-summary {
+        margin-top: 10px;
+    }
+
+    .recommendation {
+        margin-bottom: 45px;
     }
 }
