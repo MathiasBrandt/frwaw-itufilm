@@ -5,8 +5,6 @@
     <title>ITU.film</title>
 
     <!-- include Bootstrap css file -->
-    <!-- CDN: Not using this since PhpStorm can't provide auto-completion :(
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
     <!-- include custom css styles -->
     <link rel="stylesheet" href="css/styles.css" type="text/css">
@@ -14,26 +12,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <div class="container-fluid xs-no-padding">
-        <div class="header col-md-8 col-md-offset-2 col-xs-12">
+    <div class="container-fluid">
+        <div class="header col-xs-8 col-xs-offset-2">
             <img src="img/itufilm-logo.png" />
 
             <div class="menu">
-                <a href="#" class="active-page">Home</a>
-                <a href="#" class="hidden-md hidden-lg">News</a>
-                <a href="#">Movies</a>
+                <a href="#">Home</a>
+                <a href="#" class="active-page">Movies</a>
                 <a href="#">About</a>
             </div>
         </div>
 
-        <div class="middle col-md-8 col-md-offset-2 col-xs-12">
-            <div class="main-content col-sm-8">
+        <div class="middle col-xs-8 col-xs-offset-2">
+            <div class="main-content col-xs-8">
                 <!-- movie information -->
-                <div class="col-md-9 item col-xs-12">
+                <div class="col-xs-9 item">
                     <div class="item-heading">
                         Her
 
-                        <div class="movie-information hidden-xs hidden-sm">
+                        <div class="movie-information">
                             <p>
                                 <span class="glyphicon glyphicon-star"></span>
                                 <span class="glyphicon glyphicon-star"></span>
@@ -48,37 +45,24 @@
                     </div>
 
                     <div class="item-content item-details">
-                        <div class="movie-information hidden-md hidden-lg">
-                            <p class="xs-red-font">
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star-empty"></span>
-                            </p>
-                            <p>
-                                Screening on February 27th
-                            </p>
-                        </div>
-
                         <table class="table table-borderless">
                             <tr>
-                                <td class="col-md-3 col-xs-4"><b>Runtime</b></td>
+                                <td class="col-xs-3"><b>Runtime</b></td>
                                 <td>126 min</td>
                             </tr>
 
                             <tr>
-                                <td class="col-md-3 col-xs-4"><b>Genre</b></td>
+                                <td class="col-xs-3"><b>Genre</b></td>
                                 <td>Drama, Romance, Sci-Fi</td>
                             </tr>
 
                             <tr>
-                                <td class="col-md-3 col-xs-4"><b>Release Date</b></td>
+                                <td class="col-xs-3"><b>Release Date</b></td>
                                 <td>January 10th, 2014</td>
                             </tr>
 
                             <tr>
-                                <td class="col-md-3 col-xs-4"><b>Summary</b></td>
+                                <td class="col-xs-3"><b>Summary</b></td>
                                 <td>A lonely writer develops an unlikely relationship with his newly purchased operating system that's designed to meet his every need.</td>
                             </tr>
                         </table>
@@ -87,7 +71,7 @@
                 <!-- /movie information -->
 
                 <!-- movie poster -->
-                <div class="col-md-3 item item-image item-right col-xs-12">
+                <div class="col-xs-3 item item-image item-right">
                     <img src="img/her-poster.png" />
 
                     <a href="#" class="btn btn-default button">Like This Movie</a>
@@ -95,37 +79,23 @@
                 <!-- /movie poster -->
 
                 <!-- recommended by -->
-                <div class="col-md-9 item col-xs-12">
+                <div class="col-xs-9 item">
                     <div class="item-heading">
                         Recommended By
                     </div>
 
                     <div class="item-content item-details">
-                        <table class="table table-borderless hidden-xs hidden-sm">
+                        <table class="table table-borderless">
                             <tr>
-                                <td class="col-md-3"><b>Mathias Brandt</b></td>
+                                <td class="col-xs-3"><b>Mathias Brandt</b></td>
                                 <td>"A great movie for people interested in AI"</td>
                             </tr>
 
                             <tr>
-                                <td class="col-md-3"><b>Simon Langhoff</b></td>
+                                <td class="col-xs-3"><b>Simon Langhoff</b></td>
                                 <td>"Gives a new perspective on AI development"</td>
                             </tr>
                         </table>
-
-                        <div class="hidden-md hidden-lg">
-                            <p>
-                                <b>Mathias Brandt</b>
-                                <br />
-                                "A great movie for people interested in AI"
-                            </p>
-
-                            <p>
-                                <b>Simon Langhoff</b>
-                                <br />
-                                "Gives a new perspective on AI development"
-                            </p>
-                        </div>
                     </div>
                 </div>
                 <!-- /recommended by -->
@@ -137,7 +107,7 @@
                     </div>
 
                     <div class="item-content item-details">
-                        <table class="table table-borderless similar-movies-table center-text item-image hidden-xs hidden-sm">
+                        <table class="table table-borderless similar-movies-table center-text item-image">
                             <tr>
                                 <td class="col-sm-3"><a href="#"><img src="img/dallas.png" /></a></td>
                                 <td class="col-sm-3"><a href="#"><img src="img/gravity.png" /></a></td>
@@ -152,28 +122,6 @@
                                 <td class="col-sm-3"><a href="#">Silver Lining's Playbook</a></td>
                             </tr>
                         </table>
-
-                        <div class="hidden-md hidden-lg item-image xs-no-padding center-text">
-                            <a href="#"><img src="img/dallas.png" /></a>
-                            <p>
-                                <a href="#">Dallas Buyers Club</a>
-                            </p>
-
-                            <a href="#"><img src="img/gravity.png" /></a>
-                            <p>
-                                <a href="#">Gravity</a>
-                            </p>
-
-                            <a href="#"><img src="img/12years.png" /></a>
-                            <p>
-                                <a href="#">12 Years a Slave</a>
-                            </p>
-
-                            <a href="#"><img src="img/silver.png" /></a>
-                            <p>
-                                <a href="#">Silver Lining's Playbook</a>
-                            </p>
-                        </div>
                     </div>
                 </div>
                 <!-- /similar movies -->
@@ -206,7 +154,7 @@
             </div>
 
             <!-- hide the sidebar on small devices -->
-            <div class="sidebar col-md-4 hidden-xs hidden-sm">
+            <div class="sidebar col-xs-4">
                 <!-- next event -->
                 <div class="item">
                     <div class="item-heading">
@@ -251,7 +199,7 @@
             </div>
         </div>
 
-        <div class="footer col-xs-12">
+        <div class="footer col-xs-8 col-xs-offset-2">
             &copy; 2015 ITU.film
         </div>
     </div>

@@ -5,8 +5,6 @@
     <title>ITU.film</title>
 
     <!-- include Bootstrap css file -->
-    <!-- CDN: Not using this since PhpStorm can't provide auto-completion :(
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
     <!-- include custom css styles -->
     <link rel="stylesheet" href="css/styles.css" type="text/css">
@@ -14,22 +12,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <div class="container-fluid xs-no-padding">
-        <div class="header col-md-8 col-md-offset-2 col-xs-12">
+    <div class="container-fluid">
+        <div class="header col-xs-8 col-xs-offset-2">
             <img src="img/itufilm-logo.png" />
 
             <div class="menu">
                 <a href="#" class="active-page">Home</a>
-                <a href="#" class="hidden-md hidden-lg">News</a>
                 <a href="#">Movies</a>
                 <a href="#">About</a>
             </div>
         </div>
 
-        <div class="middle col-md-8 col-md-offset-2 col-xs-12">
+        <div class="middle col-xs-8 col-xs-offset-2">
             <!-- news -->
-            <!-- hide this element on small devices -->
-            <div class="main-content col-md-8 hidden-xs">
+            <div class="main-content col-xs-8">
                 <div class="item">
                     <div class="item-heading">
                         Oscars Fever!
@@ -78,7 +74,7 @@
             </div>
 
             <!-- make the sidebar have full width on small devices -->
-            <div class="sidebar col-md-4 col-xs-12">
+            <div class="sidebar col-xs-4">
                 <!-- next event -->
                 <div class="item">
                     <div class="item-heading">
@@ -123,7 +119,7 @@
             </div>
         </div>
 
-        <div class="footer col-md-8 col-md-offset-2 col-xs-12">
+        <div class="footer col-xs-8 col-xs-offset-2">
             &copy; 2015 ITU.film
         </div>
     </div>

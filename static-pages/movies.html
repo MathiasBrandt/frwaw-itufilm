@@ -5,8 +5,6 @@
     <title>ITU.film</title>
 
     <!-- include Bootstrap css file -->
-    <!-- CDN: Not using this since PhpStorm can't provide auto-completion :(
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
     <!-- include custom css styles -->
     <link rel="stylesheet" href="css/styles.css" type="text/css">
@@ -14,8 +12,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <div class="container">
-        <div class="header col-sm-12">
+    <div class="container-fluid">
+        <div class="header col-xs-8 col-xs-offset-2">
             <img src="img/itufilm-logo.png" />
 
             <div class="menu">
@@ -25,10 +23,10 @@
             </div>
         </div>
 
-        <div class="middle col-sm-12">
-            <div class="main-content col-sm-8">
+        <div class="middle col-xs-8 col-xs-offset-2">
+            <div class="main-content col-xs-8">
                 <!-- mood recommendations -->
-                <div class="col-sm-7 item">
+                <div class="col-xs-7 item">
                     <div class="item-heading">
                         Mood Recommendations
                     </div>
@@ -36,12 +34,12 @@
                     <div class="item-content">
                         <table class="table table-borderless mood-recommendations-table">
                             <tr>
-                                <td class="col-sm-6"><a href="#" class="btn btn-default button">Happy</a></td>
-                                <td class="col-sm-6"><a href="#" class="btn btn-default button">Sad</a></td>
+                                <td class="col-xs-6"><a href="#" class="btn btn-default button">Happy</a></td>
+                                <td class="col-xs-6"><a href="#" class="btn btn-default button">Sad</a></td>
                             </tr>
                             <tr>
-                                <td class="col-sm-6"><a href="#" class="btn btn-default button">Derped</a></td>
-                                <td class="col-sm-6"><a href="#" class="btn btn-default button">Excited</a></td>
+                                <td class="col-xs-6"><a href="#" class="btn btn-default button">Derped</a></td>
+                                <td class="col-xs-6"><a href="#" class="btn btn-default button">Excited</a></td>
                             </tr>
                         </table>
                     </div>
@@ -49,7 +47,7 @@
                 <!-- /mood recommendations -->
 
                 <!-- staff recommends -->
-                <div class="col-sm-5 item item-right">
+                <div class="col-xs-5 item item-right">
                     <div class="item-heading">
                         Staff Recommends
                     </div>
@@ -97,7 +95,7 @@
                 <!-- /staff recommends -->
 
                 <!-- previous screenings -->
-                <div class="col-sm-7 item">
+                <div class="col-xs-7 item">
                     <div class="item-heading">
                         Previous Screenings
                     </div>
@@ -105,7 +103,7 @@
                     <div class="item-content">
                         <table class="table table-borderless previous-screenings-table">
                             <tr>
-                                <td class="col-sm-4 item-image">
+                                <td class="col-xs-4 item-image">
                                     <img src="img/sugar.jpg" />
                                 </td>
 
@@ -119,7 +117,7 @@
                             </tr>
 
                             <tr>
-                                <td class="col-sm-4 item-image">
+                                <td class="col-xs-4 item-image">
                                     <img src="img/letter.jpg" />
                                 </td>
 
@@ -133,7 +131,7 @@
                             </tr>
 
                             <tr>
-                                <td class="col-sm-4 item-image">
+                                <td class="col-xs-4 item-image">
                                     <img src="img/book.jpg" />
                                 </td>
 
@@ -151,7 +149,7 @@
                 <!-- /previous screenings -->
             </div>
 
-            <div class="sidebar col-sm-4">
+            <div class="sidebar col-xs-4">
                 <!-- next event -->
                 <div class="item">
                     <div class="item-heading">
@@ -196,7 +194,7 @@
             </div>
         </div>
 
-        <div class="footer col-sm-12">
+        <div class="footer col-xs-8 col-xs-offset-2">
             &copy; 2015 ITU.film
         </div>
     </div>
