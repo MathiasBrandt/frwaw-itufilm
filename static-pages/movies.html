@@ -12,21 +12,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="header col-xs-8 col-xs-offset-2">
+    <div class="container-fluid xs-no-padding">
+        <div class="header col-md-8 col-md-offset-2 col-xs-12">
             <img src="img/itufilm-logo.png" />
 
             <div class="menu">
-                <a href="#">Home</a>
-                <a href="#" class="active-page">Movies</a>
+                <a href="#" class="active-page">Home</a>
+                <!-- only show news item on small devices -->
+                <a href="#" class="visible-xs-inline">News</a>
+                <a href="#">Movies</a>
                 <a href="#">About</a>
             </div>
         </div>
 
-        <div class="middle col-xs-8 col-xs-offset-2">
-            <div class="main-content col-xs-8">
+        <div class="middle col-md-8 col-md-offset-2 col-xs-12">
+            <div class="main-content col-md-8 col-xs-12">
                 <!-- mood recommendations -->
-                <div class="col-xs-7 item">
+                <div class="col-md-7 col-xs-12 item">
                     <div class="item-heading">
                         Mood Recommendations
                     </div>
@@ -47,7 +49,7 @@
                 <!-- /mood recommendations -->
 
                 <!-- staff recommends -->
-                <div class="col-xs-5 item item-right">
+                <div class="col-md-5 col-xs-12 item item-right">
                     <div class="item-heading">
                         Staff Recommends
                     </div>
@@ -95,7 +97,7 @@
                 <!-- /staff recommends -->
 
                 <!-- previous screenings -->
-                <div class="col-xs-7 item">
+                <div class="col-md-7 col-xs-12 item">
                     <div class="item-heading">
                         Previous Screenings
                     </div>
@@ -149,7 +151,8 @@
                 <!-- /previous screenings -->
             </div>
 
-            <div class="sidebar col-xs-4">
+            <!-- hide the sidebar on small devices -->
+            <div class="sidebar col-md-4 hidden-xs">
                 <!-- next event -->
                 <div class="item">
                     <div class="item-heading">
@@ -194,7 +197,7 @@
             </div>
         </div>
 
-        <div class="footer col-xs-8 col-xs-offset-2">
+        <div class="footer col-md-8 col-md-offset-2 col-xs-12">
             &copy; 2015 ITU.film
         </div>
     </div>
