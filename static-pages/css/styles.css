@@ -169,17 +169,6 @@ body {
     padding: 10px;
 }
 
-.collapse-icon {
-    color: #ffffff;
-    font-size: 40px;
-    padding: 0px;
-    line-height: 45px;
-}
-
-.collapse-icon:hover {
-    color: #ffffff;
-}
-
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 991px) {
     .xs-no-padding {
