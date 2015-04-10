@@ -86,6 +86,7 @@ body {
     color: #000000;
     padding: 15px;
     border-bottom: medium solid #cc0000;
+    overflow: hidden;
 }
 
 .item-details {
