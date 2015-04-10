@@ -15,21 +15,22 @@ body {
 
 .header {
     background-color: #cc0000;
-    min-height: 120px;
     padding: 15px;
     color: #ffffff;
 }
 
-.header img {
+.header-logo {
+    padding: 0px;
+}
+
+.header-logo img {
     display: block;
     width: 30%;
     margin-bottom: 20px;
 }
 
-.menu a {
-    color: #ffffff;
-    margin-right: 20px;
-    font-size: medium;
+.header-menu {
+    padding: 0px;
 }
 
 .active-page {
@@ -169,6 +170,34 @@ body {
     margin-bottom: 25px;
 }
 
+.navbar {
+    background-color: #cc0000;
+    border: none;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    min-height: 0px;
+}
+
+.navbar-default .navbar-collapse {
+    border: none;
+    padding-left: 0px;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #ffffff;
+    font-size: medium;
+    padding-left: 0px;
+    padding-right: 20px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: #ffffff;
+    font-size: medium;
+    text-decoration: underline;
+}
+
 /* Specific for extra small devices, phones */
 @media only screen and (max-width : 768px) {
     .xs-no-padding {
@@ -217,5 +246,22 @@ body {
 
     .recommendation {
         margin-bottom: 45px;
+    }
+
+    .navbar-default .navbar-nav > li > a {
+        padding-bottom: 30px;
+        font-size: x-large;
+    }
+
+    .navbar-default .navbar-nav > li > a:hover {
+        font-size: x-large;
+    }
+
+    .header {
+        padding-bottom: 0px;
+    }
+
+    .navbar-default .navbar-collapse {
+        padding-left: 15px;
     }
 }
