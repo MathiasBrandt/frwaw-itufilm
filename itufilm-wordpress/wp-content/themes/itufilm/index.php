@@ -7,7 +7,9 @@
         <?php endwhile; endif; ?>
     </div>
 
-    <?php get_sidebar(); ?>
+        <div class="sidebar col-md-4 col-xs-12">
+            <?php get_sidebar(); ?>
+        </div>
     </div>
 
 <?php get_footer(); ?>
