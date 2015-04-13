@@ -1,24 +1,51 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-<head>
-<meta charset="<?php bloginfo( 'charset' ); ?>" />
-<meta name="viewport" content="width=device-width" />
-<title><?php wp_title( ' | ', true, 'right' ); ?></title>
-<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
-<?php wp_head(); ?>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>ITU.film</title>
+
+    <!-- include Bootstrap css file -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.css" type="text/css"> -->
+    <!-- include custom css styles -->
+    <!-- <link rel="stylesheet" href="css/styles.css" type="text/css"> -->
+    <!-- include jQuery -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
+    <!-- include bootstrap javascript -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> -->
+
+    <?php wp_head(); ?>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body <?php body_class(); ?>>
-<div id="wrapper" class="hfeed">
-<header id="header" role="banner">
-<section id="branding">
-<div id="site-title"><?php if ( ! is_singular() ) { echo '<h1>'; } ?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( get_bloginfo( 'name' ), 'blankslate' ); ?>" rel="home"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a><?php if ( ! is_singular() ) { echo '</h1>'; } ?></div>
-<div id="site-description"><?php bloginfo( 'description' ); ?></div>
-</section>
-<nav id="menu" role="navigation">
-<div id="search">
-<?php get_search_form(); ?>
-</div>
-<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
-</nav>
-</header>
-<div id="container">
+
+<body>
+<div class="container-fluid xs-no-padding">
+    <div class="header col-md-8 col-md-offset-2 col-xs-12">
+        <div class="col-md-12 col-xs-8 header-logo">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/itufilm-logo.png" />
+        </div>
+
+        <div class="col-md-12 col-md-offset-0 col-xs-3 col-xs-offset-1 header-menu">
+            <nav class="navbar navbar-default">
+                <div class="col-xs-12">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-menu">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <div class="col-xs-12">
+                    <div class="collapse navbar-collapse" id="collapse-menu">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#" class="active-page">Home</a></li>
+                            <!-- only show news item on small devices -->
+                            <li class="visible-xs-inline"><a href="#">News</a></li>
+                            <li><a href="#">Movies</a></li>
+                            <li><a href="#">About</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
