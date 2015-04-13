@@ -74,6 +74,10 @@ body {
     line-height: 45px;
 }
 
+.item-heading a {
+    color: #ffffff;
+}
+
 .item-image img {
     width: 100%;
 }
@@ -88,6 +92,11 @@ body {
 
 .item-details {
     font-size: small;
+}
+
+.item-meta {
+    font-size: smaller;
+    margin-bottom: 10px;
 }
 
 .next-event-content {
@@ -250,11 +259,11 @@ body {
 
     .navbar-default .navbar-nav > li > a {
         padding-bottom: 30px;
-        font-size: x-large;
+        font-size: large;
     }
 
     .navbar-default .navbar-nav > li > a:hover {
-        font-size: x-large;
+        font-size: large;
     }
 
     .header {

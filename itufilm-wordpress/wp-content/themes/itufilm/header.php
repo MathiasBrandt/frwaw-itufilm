@@ -4,15 +4,6 @@
     <meta charset="UTF-8">
     <title>ITU.film</title>
 
-    <!-- include Bootstrap css file -->
-    <!-- <link rel="stylesheet" href="css/bootstrap.css" type="text/css"> -->
-    <!-- include custom css styles -->
-    <!-- <link rel="stylesheet" href="css/styles.css" type="text/css"> -->
-    <!-- include jQuery -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
-    <!-- include bootstrap javascript -->
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> -->
-
     <?php wp_head(); ?>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,14 +29,11 @@
                 <div class="col-xs-12">
                     <div class="collapse navbar-collapse" id="collapse-menu">
                         <ul class="nav navbar-nav">
-                            <li><a href="#" class="active-page">Home</a></li>
-                            <!-- only show news item on small devices -->
-                            <li class="visible-xs-inline"><a href="#">News</a></li>
-                            <li><a href="#">Movies</a></li>
-                            <li><a href="#">About</a></li>
+                            <?php wp_nav_menu( array( 'items_wrap' => '%3$s', 'container' => false, 'menu_class' => '' ) ); ?>
                         </ul>
                     </div>
                 </div>
             </nav>
         </div>
     </div>
+

@@ -1,12 +1,15 @@
 <?php get_header(); ?>
-<section id="content" role="main">
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<?php get_template_part( 'entry' ); ?>
-<?php if ( ! post_password_required() ) comments_template( '', true ); ?>
-<?php endwhile; endif; ?>
-<footer class="footer">
-<?php get_template_part( 'nav', 'below-single' ); ?>
-</footer>
-</section>
-<?php get_sidebar(); ?>
+
+    <div class="middle col-md-8 col-md-offset-2 col-xs-12">
+        <div class="main-content col-md-8">
+            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                <?php get_template_part( 'entry' ); ?>
+            <?php endwhile; endif; ?>
+        </div>
+
+        <div class="hidden-xs">
+            <?php get_sidebar(); ?>
+        </div>
+    </div>
+
 <?php get_footer(); ?>
