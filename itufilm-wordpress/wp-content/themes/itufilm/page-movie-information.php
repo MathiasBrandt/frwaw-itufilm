@@ -73,7 +73,24 @@
                     <div class="col-md-9 col-xs-8 no-padding"><?php print_custom_field('movie_runtime'); ?> min.</div>
 
                     <div class="col-md-3 col-xs-4 no-padding"><b>Genre</b></div>
-                    <div class="col-md-9 col-xs-8 no-padding"><?php print_custom_field('movie_genre'); ?></div>
+                    <div class="col-md-9 col-xs-8 no-padding">
+                        <?php
+                            $genres = get_custom_field('movie_genre');
+
+                            if(!empty($genres)) {
+                                for($i = 0; $i < count($genres); $i++) {
+                                    echo get_post($genres[$i])->post_title;
+                                    if($i < (count($genres) - 1)) {
+                                        // only add comma and space if not the last item
+                                        echo ", ";
+                                    }
+                                }
+                            } else {
+                                echo "&nbsp;";
+                            }
+
+                        ?>
+                    </div>
 
                     <div class="col-md-3 col-xs-4 no-padding"><b>Release Date</b></div>
                     <div class="col-md-9 col-xs-8 no-padding"><?php print_custom_field('movie_release_date'); ?></div>
