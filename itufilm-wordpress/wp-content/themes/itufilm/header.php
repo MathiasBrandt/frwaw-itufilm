@@ -29,7 +29,9 @@
                 <div class="col-xs-12">
                     <div class="collapse navbar-collapse" id="collapse-menu">
                         <ul class="nav navbar-nav">
-                            <?php wp_nav_menu( array( 'items_wrap' => '%3$s', 'container' => false, 'menu_class' => '' ) ); ?>
+                            <?php
+                                wp_nav_menu( array( 'items_wrap' => '%3$s', 'container' => false, 'menu_class' => '' ) );
+                            ?>
                         </ul>
                     </div>
                 </div>

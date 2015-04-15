@@ -9,14 +9,21 @@
 
                     <div class="movie-information hidden-xs">
                         <p>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star-empty"></span>
+                            <?php
+                                $stars = get_custom_field('movie_rating');
+                                $emptyStars = 5 - $stars;
+
+                                for($i = 0; $i < $stars; $i++) {
+                                    echo '<span class="glyphicon glyphicon-star"></span>';
+                                }
+
+                                for($i = 0; $i < $emptyStars; $i++) {
+                                    echo '<span class="glyphicon glyphicon-star-empty"></span>';
+                                }
+                            ?>
                         </p>
                         <p>
-                            Screening on February 27th
+                            Screening on <?php print_custom_field('movie_screening_date'); ?>
                         </p>
                     </div>
                 </div>
@@ -24,28 +31,35 @@
                 <div class="item-content item-details">
                     <div class="movie-information visible-xs">
                         <div class="rating-stars">
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star-empty"></span>
+                            <?php
+                            $stars = get_custom_field('movie_rating');
+                            $emptyStars = 5 - $stars;
+
+                            for($i = 0; $i < $stars; $i++) {
+                                echo '<span class="glyphicon glyphicon-star"></span>';
+                            }
+
+                            for($i = 0; $i < $emptyStars; $i++) {
+                                echo '<span class="glyphicon glyphicon-star-empty"></span>';
+                            }
+                            ?>
                         </div>
 
-                        Screening on February 27th
+                        <?php print_custom_field('movie_screening_date'); ?>
                     </div>
 
                     <div class="col-md-3 col-xs-4 no-padding"><b>Runtime</b></div>
-                    <div class="col-md-9 col-xs-8 no-padding">126 min</div>
+                    <div class="col-md-9 col-xs-8 no-padding"><?php print_custom_field('movie_runtime'); ?> min.</div>
 
                     <div class="col-md-3 col-xs-4 no-padding"><b>Genre</b></div>
-                    <div class="col-md-9 col-xs-8 no-padding">Drama, Romance, Sci-Fi</div>
+                    <div class="col-md-9 col-xs-8 no-padding"><?php print_custom_field('movie_genre'); ?></div>
 
                     <div class="col-md-3 col-xs-4 no-padding"><b>Release Date</b></div>
-                    <div class="col-md-9 col-xs-8 no-padding">January 10th, 2014</div>
+                    <div class="col-md-9 col-xs-8 no-padding"><?php print_custom_field('movie_release_date'); ?></div>
 
 
                     <div class="col-md-3 col-xs-12 no-padding movie-summary"><b>Summary</b></div>
-                    <div class="col-md-9 col-xs-12 no-padding">A lonely writer develops an unlikely relationship with his newly purchased operating system that's designed to meet his every need.</div>
+                    <div class="col-md-9 col-xs-12 no-padding"><?php print_custom_field('movie_summary'); ?></div>
                 </div>
             </div>
             <!-- /movie information -->

@@ -30,7 +30,7 @@
                 </div>
 
                 <div class="item-image">
-                    <a href="#">
+                    <a href="?post_type=movie&p=39">
                         <img src="<?php echo get_template_directory_uri(); ?>/img/chappie.png" />
                     </a>
                 </div>

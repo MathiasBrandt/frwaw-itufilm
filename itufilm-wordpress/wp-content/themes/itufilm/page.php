@@ -2,9 +2,13 @@
 
 <div class="middle col-md-8 col-md-offset-2 col-xs-12">
     <div class="main-content col-xs-12">
-        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-            <?php get_template_part( 'entry' ); ?>
-        <?php endwhile; endif; ?>
+        <?php
+            $posts = get_posts();
+
+            foreach($posts as $post) {
+                get_template_part('entry');
+            }
+        ?>
     </div>
 </div>
 

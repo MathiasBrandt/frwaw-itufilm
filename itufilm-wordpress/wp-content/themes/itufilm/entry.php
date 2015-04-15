@@ -15,5 +15,9 @@
 
     <?php get_template_part('entry', 'image'); ?>
 
-    <?php get_template_part('entry', 'content'); ?>
+    <?php if (is_single()) {
+        get_template_part('entry', 'content');
+    } else {
+        get_template_part('entry', 'summary');
+    } ?>
 </div>
