@@ -36,7 +36,8 @@
                         </p>
                         <p>
                             <?php
-                                $movieScreening = get_custom_field('movie_screening_relation:get_post');
+                                $movieScreening = get_custom_field('screening_relation:get_post');
+
                                 if(isset($movieScreening) && !empty($movieScreening)) {
                                     $screeningDate = $movieScreening['screening_date'];
 
@@ -71,7 +72,8 @@
                         </div>
 
                         <?php
-                            $movieScreening = get_custom_field('movie_screening_relation:get_post');
+                            $movieScreening = get_custom_field('screening_relation:get_post');
+
                             if(isset($movieScreening) && !empty($movieScreening)) {
                                 $screeningDate = $movieScreening['screening_date'];
 

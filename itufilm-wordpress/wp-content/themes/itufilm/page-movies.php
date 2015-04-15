@@ -33,17 +33,21 @@
                     $posts = get_posts(array('post_type' => 'staff_recommendation', 'numberposts' => '5'));
 
                     foreach($posts as $post):
+
+                    $movie = get_custom_field('movie_relation:get_post');
+                    $params = array('movie-id' => $movie['ID']);
+                    $link = add_query_arg($params, get_page_link(MOVIE_INFORMATION_PAGE_ID));
                 ?>
 
-                <div class="item-image">
-                    <a href="#">
-                        <img src="<?php print_custom_field('movie_poster'); ?>" />
-                    </a>
-                </div>
+                <a href="<?php echo $link; ?>">
+                    <div class="item-image">
+                        <img src="<?php print_custom_field('promo_image:to_image_src'); ?>" />
+                    </div>
 
-                <div class="item-content center-text small-padding">
-                    <a href="#"><?php echo the_title(); ?></a>
-                </div>
+                    <div class="item-content center-text small-padding">
+                        <?php echo the_title(); ?>
+                    </div>
+                </a>
 
                 <?php
                     endforeach;
@@ -67,7 +71,11 @@
 
                         <tr>
                             <td class="col-xs-4 item-image">
-                                <img src="<?php print_custom_field('movie_poster'); ?>" />
+                                <?php
+                                    $movie = get_custom_field("movie_relation:get_post");
+                                    $imgSrc = get_post($movie['movie_poster'])->guid;
+                                ?>
+                                <img src="<?php echo $imgSrc; ?>" />
                             </td>
 
                             <td>
