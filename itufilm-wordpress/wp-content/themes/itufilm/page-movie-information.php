@@ -1,11 +1,23 @@
 <?php get_header(); ?>
 
+    <?php
+        /*$pl = get_page_link('47', false);
+        echo "original: " . $pl;
+        $params = array('movie-id' => '49');
+        $pl = add_query_arg($params, $pl);
+        echo "new: " . $pl;
+        echo "var: " . $_GET['movie-id'];
+        */
+        //$post = get_post(array($_GET['movie-id']));
+        $post = get_post($_GET['movie-id']);
+    ?>
+
     <div class="middle col-md-8 col-md-offset-2 col-xs-12">
         <div class="main-content col-md-8 col-xs-12">
             <!-- movie information -->
             <div class="col-md-9 col-xs-12 item">
                 <div class="item-heading">
-                    <?php print_custom_field('movie_title'); ?>
+                    <?php echo the_title(); ?>
 
                     <div class="movie-information hidden-xs">
                         <p>
@@ -23,7 +35,16 @@
                             ?>
                         </p>
                         <p>
-                            Screening on <?php print_custom_field('movie_screening_date'); ?>
+
+
+                            <?php
+                                $screeningDate = get_custom_field('screening_date');
+                                $diff = time() - strtotime($screeningDate);
+                                $hasHappened = ($diff > 0) ? 1 : 0;
+
+                                echo $hasHappened ? "Screened " : "Screening ";
+                            ?>
+                            on <?php print_custom_field('screening_date'); ?>
                         </p>
                     </div>
                 </div>
@@ -45,7 +66,7 @@
                             ?>
                         </div>
 
-                        <?php print_custom_field('movie_screening_date'); ?>
+                        <?php print_custom_field('screening_date'); ?>
                     </div>
 
                     <div class="col-md-3 col-xs-4 no-padding"><b>Runtime</b></div>
