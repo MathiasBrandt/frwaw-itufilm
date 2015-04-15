@@ -11,7 +11,7 @@
     </div>
 
     <div class="item-image">
-        <img src="<?php print_custom_field('screening_poster'); ?>" />
+        <img src="<?php print_custom_field('movie_poster'); ?>" />
     </div>
 
     <div class="item-content next-event-content">

@@ -29,47 +29,25 @@
                     Staff Recommends
                 </div>
 
+                <?php
+                    $posts = get_posts(array('post_type' => 'staff_recommendation', 'numberposts' => '5'));
+
+                    foreach($posts as $post):
+                ?>
+
                 <div class="item-image">
-                    <a href="?post_type=movie&p=39">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/chappie.png" />
+                    <a href="#">
+                        <img src="<?php print_custom_field('movie_poster'); ?>" />
                     </a>
                 </div>
 
                 <div class="item-content center-text small-padding">
-                    <a href="#">Chappie</a>
+                    <a href="#"><?php echo the_title(); ?></a>
                 </div>
 
-                <div class="item-image">
-                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/fifty.png" /></a>
-                </div>
-
-                <div class="item-content center-text small-padding">
-                    <a href="#">Fifty Shades of Grey</a>
-                </div>
-
-                <div class="item-image">
-                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/spongebob.png" /></a>
-                </div>
-
-                <div class="item-content center-text small-padding">
-                    <a href="#">The Spongebob Movie:<br/>Sponge Out of Water</a>
-                </div>
-
-                <div class="item-image">
-                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/sniper.png" /></a>
-                </div>
-
-                <div class="item-content center-text small-padding">
-                    <a href="#">American Sniper</a>
-                </div>
-
-                <div class="item-image">
-                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/imitation.png" /></a>
-                </div>
-
-                <div class="item-content center-text small-padding">
-                    <a href="#">The Imitation Game</a>
-                </div>
+                <?php
+                    endforeach;
+                ?>
             </div>
             <!-- /staff recommends -->
 
@@ -81,47 +59,29 @@
 
                 <div class="item-content">
                     <table class="table table-borderless previous-screenings-table">
-                        <tr>
-                            <td class="col-xs-4 item-image">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/sugar.jpg" />
-                            </td>
+                        <?php
+                            $posts = get_posts(array('post_type' => 'movie_screening', 'numberposts' => '5'));
 
-                            <td>
-                                <a href="#">Searching for Sugar Man</a>
-                                <br />
-                                February 6th, 2015
-                                <br />
-                                Café Analog
-                            </td>
-                        </tr>
+                            foreach($posts as $post):
+                        ?>
 
                         <tr>
                             <td class="col-xs-4 item-image">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/letter.jpg" />
+                                <img src="<?php print_custom_field('movie_poster'); ?>" />
                             </td>
 
                             <td>
-                                <a href="#">The Letter Writer</a>
+                                <a href="#"><?php echo the_title(); ?></a>
                                 <br />
-                                September 11th, 2014
+                                <?php print_custom_field('screening_date'); ?>
                                 <br />
-                                Café Analog
+                                <?php print_custom_field('screening_location'); ?>
                             </td>
                         </tr>
 
-                        <tr>
-                            <td class="col-xs-4 item-image">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/book.jpg" />
-                            </td>
-
-                            <td>
-                                <a href="#">The Book Thief</a>
-                                <br />
-                                April 10th, 2014
-                                <br />
-                                Café Analog
-                            </td>
-                        </tr>
+                        <?php
+                            endforeach;
+                        ?>
                     </table>
 
                     <div class="col-xs-6 col-xs-offset-3">
