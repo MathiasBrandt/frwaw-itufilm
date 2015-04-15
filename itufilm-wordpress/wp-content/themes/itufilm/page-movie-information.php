@@ -35,16 +35,20 @@
                             ?>
                         </p>
                         <p>
-
-
                             <?php
-                                $screeningDate = get_custom_field('screening_date');
-                                $diff = time() - strtotime($screeningDate);
-                                $hasHappened = ($diff > 0) ? 1 : 0;
+                                $movieScreening = get_custom_field('movie_screening_relation:get_post');
+                                if(isset($movieScreening) && !empty($movieScreening)) {
+                                    $screeningDate = $movieScreening['screening_date'];
 
-                                echo $hasHappened ? "Screened " : "Screening ";
+                                    if(isset($screeningDate) && !empty($screeningDate)) {
+                                        $diff = time() - strtotime($screeningDate);
+                                        $hasHappened = ($diff > 0) ? 1 : 0;
+
+                                        echo $hasHappened ? "Screened " : "Screening ";
+                                        echo "on " . date("F jS, Y", strtotime($screeningDate));
+                                    }
+                                }
                             ?>
-                            on <?php print_custom_field('screening_date'); ?>
                         </p>
                     </div>
                 </div>
@@ -66,7 +70,20 @@
                             ?>
                         </div>
 
-                        <?php print_custom_field('screening_date'); ?>
+                        <?php
+                            $movieScreening = get_custom_field('movie_screening_relation:get_post');
+                            if(isset($movieScreening) && !empty($movieScreening)) {
+                                $screeningDate = $movieScreening['screening_date'];
+
+                                if(isset($screeningDate) && !empty($screeningDate)) {
+                                    $diff = time() - strtotime($screeningDate);
+                                    $hasHappened = ($diff > 0) ? 1 : 0;
+
+                                    echo $hasHappened ? "Screened " : "Screening ";
+                                    echo "on " . date("F jS, Y", strtotime($screeningDate));
+                                }
+                            }
+                        ?>
                     </div>
 
                     <div class="col-md-3 col-xs-4 no-padding"><b>Runtime</b></div>
