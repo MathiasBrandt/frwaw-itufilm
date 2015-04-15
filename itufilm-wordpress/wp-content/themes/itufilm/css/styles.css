@@ -207,8 +207,17 @@ body {
     text-decoration: underline;
 }
 
-.movie-library-overview {
-    height: 335px;
+.movie-library-overview img {
+    width: auto;
+    max-height: 250px;
+}
+
+.extra-small-margin-bottom {
+    margin-bottom: 5px;
+}
+
+.large-margin-bottom {
+    margin-bottom: 50px;
 }
 
 /* Specific for extra small devices, phones */
@@ -278,7 +287,8 @@ body {
         padding-left: 15px;
     }
 
-    .movie-library-overview {
-        height: 260px;
+    .movie-library-overview img {
+        width: auto;
+        max-height: 200px;
     }
 }

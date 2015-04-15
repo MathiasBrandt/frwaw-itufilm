@@ -1,4 +1,6 @@
 <?php
+const MOVIE_INFORMATION_PAGE_ID = '47';
+
 add_action('after_setup_theme', 'blankslate_setup');
 
 // hide top wordpress bar

@@ -6,8 +6,8 @@
         $params = array('movie-id' => '49');
         $pl = add_query_arg($params, $pl);
         echo "new: " . $pl;
-        echo "var: " . $_GET['movie-id'];
-        */
+        echo "var: " . $_GET['movie-id'];*/
+
         //$post = get_post(array($_GET['movie-id']));
         $post = get_post($_GET['movie-id']);
     ?>
