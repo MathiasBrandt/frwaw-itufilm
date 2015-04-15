@@ -30,7 +30,9 @@
                 </div>
 
                 <div class="item-image">
-                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/chappie.png" /></a>
+                    <a href="#">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/chappie.png" />
+                    </a>
                 </div>
 
                 <div class="item-content center-text small-padding">
