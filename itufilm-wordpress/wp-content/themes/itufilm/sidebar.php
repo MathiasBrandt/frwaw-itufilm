@@ -1,3 +1,9 @@
+<?php
+    $posts = get_posts(array('post_type' => 'movie_screening', 'numberposts' => '1'));
+
+    foreach($posts as $post):
+?>
+
 <!-- next event -->
 <div class="item">
     <div class="item-heading">
@@ -5,20 +11,24 @@
     </div>
 
     <div class="item-image">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/wallflower.jpg" />
+        <img src="<?php print_custom_field('screening_poster'); ?>" />
     </div>
 
     <div class="item-content next-event-content">
-        The Perks of Being a Wallflower
+        <?php echo the_title(); ?>
         <br />
-        16:00
+        <?php print_custom_field('screening_time'); ?>
         <br />
-        February 13th, 2015
+        <?php print_custom_field('screening_date'); ?>
         <br />
-        Auditorium 1
+        <?php print_custom_field('screening_location'); ?>
     </div>
 </div>
 <!-- /next event -->
+
+<?php
+    endforeach;
+?>
 
 <!-- where to find us -->
 <div class="item">
