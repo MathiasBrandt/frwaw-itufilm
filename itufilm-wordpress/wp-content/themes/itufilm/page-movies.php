@@ -93,7 +93,7 @@
 
             <div class="col-md-7 col-xs-12 item">
                 <div class="col-xs-12">
-                    <a href="#" class="btn btn-default button">Movie Library</a>
+                    <a href="/movie-library" class="btn btn-default button">Movie Library</a>
                 </div>
             </div>
         </div>
