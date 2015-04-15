@@ -207,6 +207,10 @@ body {
     text-decoration: underline;
 }
 
+.movie-library-overview {
+    height: 335px;
+}
+
 /* Specific for extra small devices, phones */
 @media only screen and (max-width : 768px) {
     .xs-no-padding {
@@ -272,5 +276,9 @@ body {
 
     .navbar-default .navbar-collapse {
         padding-left: 15px;
+    }
+
+    .movie-library-overview {
+        height: 260px;
     }
 }

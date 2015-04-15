@@ -26,7 +26,7 @@
                     </button>
                 </div>
 
-                <div class="col-xs-12">
+                <div class="col-xs-12 xs-no-padding">
                     <div class="collapse navbar-collapse" id="collapse-menu">
                         <ul class="nav navbar-nav">
                             <?php
