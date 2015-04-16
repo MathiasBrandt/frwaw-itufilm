@@ -1,5 +1,5 @@
 <?php
-    $posts = get_posts(array('post_type' => 'movie_screening', 'numberposts' => '1'));
+    $posts = get_posts(array('post_type' => 'movie_screening', 'numberposts' => '1', 'meta_key' => 'screening_date', 'orderby' => 'meta_value'));
 
     foreach($posts as $post):
 

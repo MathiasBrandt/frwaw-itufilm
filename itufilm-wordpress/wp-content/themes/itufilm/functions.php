@@ -1,5 +1,6 @@
 <?php
 const MOVIE_INFORMATION_PAGE_ID = '47';
+const PREVIOUS_SCREENINGS_PAGE_ID = '97';
 
 add_action('after_setup_theme', 'blankslate_setup');
 
