@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
     <?php
+        $movieId = $_GET['movie-id'];
         /*$pl = get_page_link('47', false);
         echo "original: " . $pl;
         $params = array('movie-id' => '49');
@@ -9,7 +10,7 @@
         echo "var: " . $_GET['movie-id'];*/
 
         //$post = get_post(array($_GET['movie-id']));
-        $post = get_post($_GET['movie-id']);
+        $post = get_post($movieId);
     ?>
 
     <div class="middle col-md-8 col-md-offset-2 col-xs-12">
@@ -137,15 +138,40 @@
                 </div>
 
                 <div class="item-content item-details">
-                    <div class="recommendation">
-                        <div class="col-md-3 col-xs-12 no-padding"><b>Mathias Brandt</b></div>
-                        <div class="col-md-9 col-xs-12 no-padding">"A great movie for people interested in AI"</div>
-                    </div>
+                    <?php
+                        $recommendationExists = false;
+                        $posts = get_posts(array('post_type' => 'movie_recommendation', 'numberposts' => '-1'));
 
-                    <div class="recommendation">
-                        <div class="col-md-3 col-xs-12 no-padding"><b>Simon Langhoff</b></div>
-                        <div class="col-md-9 col-xs-12 no-padding">"Gives a new perspective on AI development"</div>
-                    </div>
+                        foreach($posts as $post):
+
+                            $movieRelation = get_custom_field('movie_relation:get_post');
+                            $relationId = $movieRelation['ID'];
+
+                            if($relationId === $movieId):
+                                $recommendationExists = true;
+                    ?>
+
+                                <div class="recommendation">
+                                    <div class="col-md-3 col-xs-12 no-padding"><b>
+                                            <?php print_custom_field('author'); ?>
+                                    </b></div>
+                                    <div class="col-md-9 col-xs-12 no-padding">
+                                        "<?php print_custom_field('recommendation_content'); ?>"
+                                    </div>
+                                </div>
+
+                    <?php
+                            endif;
+                        endforeach;
+
+                        if(!$recommendationExists):
+                    ?>
+                        <div class="col-xs-12 no-padding">
+                            This movie has not been recommended by anyone.
+                        </div>
+                    <?php
+                        endif;
+                    ?>
                 </div>
             </div>
             <!-- /recommended by -->
@@ -157,26 +183,40 @@
                 </div>
 
                 <div class="item-content item-details center-text item-image">
-                    <div class="col-md-3 col-xs-6 similar-movie-item-left">
-                        <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/dallas.png" /></a>
+                    <?php
+                        $similarMovieExists = false;
 
-                        <a href="#">Dallas Buyers Club</a>
-                    </div>
-                    <div class="col-md-3 col-xs-6 similar-movie-item-right">
-                        <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/gravity.png" /></a>
+                        $post = get_post($movieId);
+                        $similarMovies = get_custom_field('similar_movies');
 
-                        <a href="#">Gravity</a>
-                    </div>
-                    <div class="col-md-3 col-xs-6 similar-movie-item-left">
-                        <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/12years.png" /></a>
+                        foreach($similarMovies as $similarMovie):
 
-                        <a href="#">12 Years a Slave</a>
-                    </div>
-                    <div class="col-md-3 col-xs-6 similar-movie-item-right">
-                        <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/silver.png" /></a>
+                            $similarMovieExists = true;
+                            $post = get_post($similarMovie);
 
-                        <a href="#">Silver Lining's Playbook</a>
-                    </div>
+                            $params = array('movie-id' => get_the_ID());
+                            $link = add_query_arg($params, get_page_link(MOVIE_INFORMATION_PAGE_ID));
+                    ?>
+                        <div class="col-md-3 col-xs-6 similar-movies large-margin-bottom">
+                            <a href="<?php echo $link; ?>">
+                                <div class="extra-small-margin-bottom">
+                                    <?php the_title(); ?>
+                                </div>
+
+                                <img src="<?php print_custom_field('movie_poster'); ?>" />
+                            </a>
+                        </div>
+                    <?php
+                        endforeach;
+
+                        if(!$similarMovieExists):
+                    ?>
+                        <div class="col-xs-12 no-padding text-left">
+                            There are no similar movies.
+                        </div>
+                    <?php
+                        endif;
+                    ?>
                 </div>
             </div>
             <!-- /similar movies -->

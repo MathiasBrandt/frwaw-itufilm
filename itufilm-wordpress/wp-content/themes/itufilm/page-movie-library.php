@@ -10,15 +10,13 @@
                         $posts = get_posts(array('post_type' => 'movie', 'numberposts' => '-1'));
 
                         foreach($posts as $post):
+
+                        $params = array('movie-id' => get_the_ID());
+                        $link = add_query_arg($params, get_page_link(MOVIE_INFORMATION_PAGE_ID));
                     ?>
 
 
                     <div class="col-md-4 col-xs-6 movie-library-overview large-margin-bottom">
-                        <?php
-                            $params = array('movie-id' => get_the_ID());
-                            $link = add_query_arg($params, get_page_link(MOVIE_INFORMATION_PAGE_ID));
-                        ?>
-
                         <a href="<?php echo $link; ?>">
                             <div class="extra-small-margin-bottom">
                                 <?php echo the_title(); ?>

@@ -220,6 +220,11 @@ body {
     margin-bottom: 50px;
 }
 
+.similar-movies img {
+    width: auto;
+    max-height: 200px;
+}
+
 /* Specific for extra small devices, phones */
 @media only screen and (max-width : 768px) {
     .xs-no-padding {
