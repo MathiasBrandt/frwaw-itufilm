@@ -67,23 +67,33 @@
                             $posts = get_posts(array('post_type' => 'movie_screening', 'numberposts' => '5'));
 
                             foreach($posts as $post):
+
+                            $movie = get_custom_field("movie_relation:get_post");
+                            $params = array('movie-id' => $movie['ID']);
+                            $link = add_query_arg($params, get_page_link(MOVIE_INFORMATION_PAGE_ID));
+                            $imgSrc = get_post($movie['movie_poster'])->guid;
                         ?>
 
                         <tr>
                             <td class="col-xs-4 item-image">
-                                <?php
-                                    $movie = get_custom_field("movie_relation:get_post");
-                                    $imgSrc = get_post($movie['movie_poster'])->guid;
-                                ?>
-                                <img src="<?php echo $imgSrc; ?>" />
+                                <a href="<?php echo $link; ?>">
+                                    <img src="<?php echo $imgSrc; ?>" />
+                                </a>
                             </td>
 
                             <td>
-                                <a href="#"><?php echo the_title(); ?></a>
+                                <a href="<?php echo $link; ?>"><?php echo the_title(); ?></a>
                                 <br />
-                                <?php print_custom_field('screening_date'); ?>
+                                <?php
+                                    $screeningDate = get_custom_field('screening_date');
+                                    $diff = time() - strtotime($screeningDate);
+                                    $hasHappened = ($diff > 0) ? 1 : 0;
+
+                                    echo $hasHappened ? "Screened " : "Screening ";
+                                    echo "on " . date("F jS, Y", strtotime($screeningDate));
+                                ?>
                                 <br />
-                                <?php print_custom_field('screening_location'); ?>
+                                In <?php print_custom_field('screening_location'); ?>
                             </td>
                         </tr>
 
