@@ -2,6 +2,11 @@
     $posts = get_posts(array('post_type' => 'movie_screening', 'numberposts' => '1'));
 
     foreach($posts as $post):
+
+    $movie = get_custom_field("movie_relation:get_post");
+    $params = array('movie-id' => $movie['ID']);
+    $link = add_query_arg($params, get_page_link(MOVIE_INFORMATION_PAGE_ID));
+    $imgSrc = get_post($movie['movie_poster'])->guid;
 ?>
 
 <!-- next event -->
@@ -11,11 +16,15 @@
     </div>
 
     <div class="item-image">
-        <img src="<?php print_custom_field('movie_poster'); ?>" />
+        <a href="<?php echo $link; ?>">
+            <img src="<?php echo $imgSrc; ?>" />
+        </a>
     </div>
 
     <div class="item-content next-event-content">
-        <?php echo the_title(); ?>
+        <a href="<?php echo $link; ?>">
+            <?php echo the_title(); ?>
+        </a>
         <br />
         <?php print_custom_field('screening_time'); ?>
         <br />
