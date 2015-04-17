@@ -2,14 +2,6 @@
 
     <?php
         $movieId = $_GET['movie-id'];
-        /*$pl = get_page_link('47', false);
-        echo "original: " . $pl;
-        $params = array('movie-id' => '49');
-        $pl = add_query_arg($params, $pl);
-        echo "new: " . $pl;
-        echo "var: " . $_GET['movie-id'];*/
-
-        //$post = get_post(array($_GET['movie-id']));
         $post = get_post($movieId);
     ?>
 
@@ -37,19 +29,24 @@
                         </p>
                         <p>
                             <?php
-                                $movieScreening = get_custom_field('screening_relation:get_post');
-
-                                if(isset($movieScreening) && !empty($movieScreening)) {
-                                    $screeningDate = $movieScreening['screening_date'];
-
-                                    if(isset($screeningDate) && !empty($screeningDate)) {
-                                        $diff = time() - strtotime($screeningDate);
-                                        $hasHappened = ($diff > 0) ? 1 : 0;
-
-                                        echo $hasHappened ? "Screened " : "Screening ";
-                                        echo "on " . date("F jS, Y", strtotime($screeningDate));
+                                $movieScreenings = get_posts(array('post_type' => 'movie_screening', 'numberposts' => '-1'));
+                                foreach($movieScreenings as $post) {
+                                    $movieRelation = get_custom_field('movie_relation:get_post');
+                                    if($movieRelation['ID'] == $movieId) {
+                                        $screeningDate = get_custom_field('screening_date');
+                                        break;
                                     }
                                 }
+
+                                if(isset($screeningDate) && !empty($screeningDate)) {
+                                    $diff = time() - strtotime($screeningDate);
+                                    $hasHappened = ($diff > 0) ? 1 : 0;
+
+                                    echo $hasHappened ? "Screened " : "Screening ";
+                                    echo "on " . date("F jS, Y", strtotime($screeningDate));
+                                }
+
+                                $post = get_post($movieId);
                             ?>
                         </p>
                     </div>
@@ -224,26 +221,35 @@
             <!-- comments -->
             <div class="col-xs-12 item">
                 <div class="item-heading">
-                    Comments
+                    User Comments
                 </div>
 
+                <?php
+                    //comments_template();
+
+                    $comments = get_comments(array('post_id' => $movieId, 'order' => 'ASC'));
+
+                    if(isset($comments) && !empty($comments)):
+                        foreach($comments as $comment):
+                ?>
                 <div class="item-content item-details comment">
-                    <div class="comment-author">Per Mortensen</div>
-                    <div class="comment-date">26-02-2015</div>
+                    <div class="comment-author"><?php echo $comment->comment_author; ?></div>
+                    <div class="comment-date"><?php echo $comment->comment_date; ?></div>
 
                     <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        <?php echo $comment->comment_content; ?>
                     </p>
                 </div>
-
+                <?php
+                        endforeach;
+                    else:
+                ?>
                 <div class="item-content item-details comment">
-                    <div class="comment-author">Henrik Haugbølle</div>
-                    <div class="comment-date">24-02-2015</div>
-
                     <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        No comments have been posted yet.
                     </p>
                 </div>
+                <?php endif; ?>
             </div>
             <!-- /comments -->
         </div>
