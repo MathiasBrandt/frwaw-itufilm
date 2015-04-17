@@ -5,7 +5,7 @@
             <!-- previous screenings -->
             <div class="col-md-12 col-xs-12 item">
                 <div class="item-heading">
-                    Previous Screenings
+                    Movie Screenings
                 </div>
 
                 <div class="item-content">

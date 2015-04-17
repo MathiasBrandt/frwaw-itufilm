@@ -58,7 +58,7 @@
             <!-- previous screenings -->
             <div class="col-md-7 col-xs-12 item">
                 <div class="item-heading">
-                    Previous Screenings
+                    Movie Screenings
                 </div>
 
                 <div class="item-content">
@@ -103,7 +103,7 @@
                     </table>
 
                     <div class="col-xs-6 col-xs-offset-3">
-                        <a href="/previous-screenings" class="btn btn-default button">More</a>
+                        <a href="/previous-screenings" class="btn btn-default button">View All</a>
                     </div>
                 </div>
             </div>
