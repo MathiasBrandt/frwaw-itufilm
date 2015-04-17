@@ -225,8 +225,6 @@
                 </div>
 
                 <?php
-                    //comments_template();
-
                     $comments = get_comments(array('post_id' => $movieId, 'order' => 'ASC'));
 
                     if(isset($comments) && !empty($comments)):
